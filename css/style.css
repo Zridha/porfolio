@@ -2,10 +2,10 @@
 :root{
   --bg: #0b0f13;
   --panel: #0f1419;
-  --text: #e7f0f2;
   --muted: #b7c2c6;
   --accent: #10b981;     /* emerald */
   --accent-2:#0ea471;
+   --text: #e7f0f2;
   --ring: rgba(16,185,129,0.35);
   --border: rgba(255,255,255,0.08);
   --shadow: rgba(0,0,0,0.45);
