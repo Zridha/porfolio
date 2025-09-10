@@ -2,7 +2,7 @@
 (function () {
   const card = document.querySelector('.portrait');
   if (!card) return;
-
+ 
   const maxX = 8; // degrees
   const maxY = 8;
 
@@ -20,3 +20,4 @@
   card.addEventListener('mousemove', tilt);
   card.addEventListener('mouseleave', reset);
 })();
+
