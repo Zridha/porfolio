@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Zaveriya Ridha - Portfolio</title>
+
+    <!-- Your styles -->
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Minimal modal styles (kept here to avoid modifying your main CSS) -->
+    <style>
+      .project-card{ cursor:pointer; }
+      .project-card:hover{ transform: translateY(-2px); transition:.2s; }
+
+      /* Modal */
+      .modal{ position:fixed; inset:0; display:none; z-index:1000; }
+      .modal.is-open{ display:block; }
+      .modal__backdrop{ position:absolute; inset:0; background:rgba(0,0,0,.55); backdrop-filter: blur(2px); }
+      .modal__dialog{
+        position:relative; margin:4rem auto; width:min(900px, 92vw);
+        background:#0f1419; color:#e7f0f2; border:1px solid rgba(255,255,255,.08);
+        border-radius:16px; box-shadow:0 8px 40px rgba(0,0,0,.55); overflow:hidden;
+      }
+      .modal__close{
+        position:absolute; top:.5rem; right:.75rem; font-size:1.5rem; line-height:1;
+        background:transparent; color:#e7f0f2; border:0; cursor:pointer; opacity:.8;
+      }
+      .modal__close:hover{ opacity:1; }
+      .modal__content{ padding:1.25rem 1.25rem 1.5rem; }
+      .modal__tech{ color:#10b981; font-weight:600; margin:.25rem 0 1rem; }
+      .modal__bullets{ margin:.75rem 0 1rem 1.25rem; }
+      .modal__bullets li{ margin:.35rem 0; }
+      .modal__gallery{
+        display:grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+        gap:.75rem; margin-top:.5rem;
+      }
+      .modal__gallery img{
+        width:100%; height:160px; object-fit:cover; border-radius:12px;
+        border:1px solid rgba(255,255,255,.08);
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- NAVBAR -->
+    <header class="nav">
+      <div class="brand">Zaveriya Ridha</div>
+      <nav>
+        <a href="#home">Home</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <!-- HERO -->
+    <section id="home" class="hero">
+      <div class="hero-left">
+        <h1 style="text-align: justify;">
+          <span class="highlight">Zaveriya</span> Ridha
+        </h1>
+        <p class="eyebrow" style="text-align: justify;">Software Developer</p>
+        <br>
+        <p class="sub" style="text-align: justify;">
+          A passionate Software Developer with hands-on experience in building scalable web applications, clean user interfaces, and reliable backend systems.
+        </p>
+        <br>
+        <p style="text-align: justify;">Bangalore, India</p>
+
+        <div class="cta-row">
+          <a class="btn btn-solid" href="#skills">View Skills</a>
+          <a class="btn btn-outline" href="#contact">Contact</a>
+        </div>
+      </div>
+
+      <div class="hero-right">
+        <div class="portrait">
+          <img src="../assets/images/logo_reels.jpg" alt="Portrait of Zaveriya Ridha" />
+        </div>
+        <div class="social-bar">
+          <a href="https://github.com/Zridha"  aria-label="GitHub">Git</a>
+          <a href="https://www.linkedin.com/in/zaveriya-ridha-75238b22a"  aria-label="LinkedIn">in</a>
+          <a href="mailto:ridhazaveriya@gmail.com" aria-label="Email">✉</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- INTERNSHIPS -->
+    <section id="internships" class="resume-block">
+      <h2><span class="highlight">Internships</span></h2>
+      <br>
+      <div class="resume-grid">
+        <article class="resume-card">
+          <div class="logo-ring"><img src="../assets/images/aicte.png" alt="IDEA LAB Logo"></div>
+          <h4>AICTE approved IDEA LAB</h4>
+          <p>
+            • Applied design thinking principles to solve problems.<br>
+            • Operated laser cutting machines and created prototypes.<br>
+            • Utilized 3D printing technology.<br>
+            • Facilitated a 1-day hands-on session for school students.
+          </p>
+          <span class="year">Oct – Nov 2022</span>
+        </article>
+
+        <article class="resume-card">
+          <div class="logo-ring"><img src="../assets/images/meerise.png" alt="MERIISE Foundation Logo"></div>
+          <h4>MERIISE Foundation</h4>
+          <p>
+            • Created app interfaces and prototypes using Figma.<br>
+            • Gained insights into startup and entrepreneurial mindset.
+          </p>
+          <span class="year">Oct – Nov 2023</span>
+        </article>
+
+        <article class="resume-card">
+          <div class="logo-ring"><img src="../assets/images/isc.webp" alt="Integrated Systems and Control"></div>
+          <h4>Integrated Systems and Control</h4>
+          <p>
+            • PCB designing using Eagle software.<br>
+            • Built simple projects using IR and LM35 sensor.<br>
+            • Contributed to developing an Ozone generator for water purifiers.
+          </p>
+          <span class="year">Feb – Apr 2025</span>
+        </article>
+
+        <article class="resume-card">
+          <div class="logo-ring"><img src="../assets/images/sharki.png" alt="Sharkify.ai Logo"></div>
+          <h4>Sharkify.ai</h4>
+          <p>
+            • Built an automated news aggregation system with Playwright &amp; Bing, integrating YouTube SEO optimization for
+            keyword extraction, title/description generation, and tag suggestions.<br>
+            • AI-powered fitness app with LLaVA meal analysis, LLaMA3 nutrition reports, BMI tracking, and workout logging.
+          </p>
+          <span class="year">Jun – Sep 2025</span>
+        </article>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="resume-block">
+      <h2>Projects</h2>
+      <br>
+      <div class="resume-grid">
+        <article class="resume-card project-card" data-id="anti-violence">
+          <h4>Smart Automated Anti-Violence Intervention</h4>
+          <p class="tech">| Python</p>
+          <p>Implemented an alert system that notifies authorities in case of violence detection using SMS and Telegram bot.</p>
+        </article>
+
+        <article class="resume-card project-card" data-id="shyra">
+          <h4>Shyra – Automated News Web Scraper with YouTube SEO Optimization</h4>
+          <p class="tech">| Python (Django), HTML, CSS</p>
+          <p>Built an automated news aggregation system with Playwright &amp; Bing, integrating YouTube SEO optimization for keywords, titles, and tags.</p>
+        </article>
+
+        <article class="resume-card project-card" data-id="kaizerfit">
+          <h4>Kaizer Fit – AI-Powered Gym &amp; Nutrition App</h4>
+          <p class="tech">| Python (FastAPI), Flutter, PostgreSQL</p>
+          <p>AI-powered fitness app with LLaVA meal analysis, LLaMA3 nutrition reports, BMI tracking, and workout logging. (Pending Play Store Launch)</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills" class="skills">
+      <h2>Skills</h2>
+      <p class="skills-sub">Tools and languages I use most.</p>
+
+      <div class="skill-grid">
+        <article class="skill"><div class="ring"><span>HTML</span></div><p>Semantic, accessible, SEO-friendly</p></article>
+        <article class="skill"><div class="ring"><span>CSS</span></div><p>Styling, animations, responsive design</p></article>
+        <article class="skill"><div class="ring"><span>Python</span></div><p>APIs, automation</p></article>
+        <article class="skill"><div class="ring"><span>FastAPI</span></div><p>APIs, automation</p></article>
+        <article class="skill"><div class="ring"><span>PostgreSQL</span></div><p>Schemas design, indexing, SQL</p></article>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="contact">
+      <h2>Contact</h2>
+      <p class="contact-sub">Have a project or question? I'd love to hear from you.</p>
+
+      <div class="contact-grid">
+        <div class="contact-info">
+          <div class="contact-card">
+            <h4>Email</h4>
+            <a href="mailto:ridhazaveriya@gmail.com">ridhazaveriya@gmail.com</a>
+          </div>
+
+          <div class="contact-card">
+            <h4>Availability</h4>
+            <p>Open to Full-time &amp; freelance</p>
+          </div>
+        </div>
+
+        <form id="contact-form" class="contact-form">
+          <!-- Honeypot (spam trap) -->
+          <input type="text" name="_honeypot" tabindex="-1" autocomplete="off" style="display:none">
+
+          <div class="field">
+            <label for="c-name">Name</label>
+            <input id="c-name" name="name" type="text" placeholder="Your name" required>
+          </div>
+
+          <div class="field two-col">
+            <div>
+              <label for="c-email">Email</label>
+              <input id="c-email" name="email" type="email" placeholder="you@example.com" required>
+            </div>
+            <div>
+              <label for="c-title">Subject</label>
+              <input id="c-title" name="title" type="text" placeholder="What’s this about?" required>
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="c-message">Message</label>
+            <textarea id="c-message" name="message" rows="6" placeholder="Tell me about your project…" required></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-solid">Send Message</button>
+          <p id="form-status" class="form-status" aria-live="polite" style="margin-top:10px;"></p>
+        </form>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <p>© 2025 Zaveriya Ridha. All rights reserved.</p>
+    </footer>
+
+    <!-- Project Modal -->
+    <div id="project-modal" class="modal" aria-hidden="true">
+      <div class="modal__backdrop" data-close></div>
+      <div class="modal__dialog" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+        <button class="modal__close" aria-label="Close" data-close>×</button>
+        <div class="modal__content">
+          <h3 id="modal-title"></h3>
+          <p class="modal__tech"></p>
+          <p class="modal__desc"></p>
+          <ul class="modal__bullets"></ul>
+          <div class="modal__gallery"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- EmailJS -->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+    <!-- Your scripts -->
+    <script src="/js/app.js"></script>
+
+    <!-- Modal + Contact logic -->
+    <script>
+      /* -------- EmailJS init & handler -------- */
+      (function(){ emailjs.init("3Pvj9Z4XMS0baP-UI"); })();
+
+      function sendEmail(e) {
+        e.preventDefault();
+        const status = document.getElementById('form-status');
+        status.textContent = "Sending…";
+        emailjs.sendForm('service_dy0pt86', 'template_i88f87a', e.target)
+          .then(() => {
+            status.textContent = "Message sent successfully!";
+            e.target.reset();
+          }, (error) => {
+            status.textContent = "Failed to send: " + (error?.text || "Unknown error");
+          });
+      }
+      document.getElementById('contact-form').addEventListener('submit', sendEmail);
+
+      /* -------- Project modal data -------- */
+      const PROJECTS = {
+        "anti-violence": {
+          title: "Smart Automated Anti-Violence Intervention",
+          tech: "Python | SMS Gateway, Telegram Bot",
+          desc: "Alert system that notifies authorities when violence is detected; integrates with CCTV/ML pipeline.",
+          bullets: [
+            "Rule-based triage + human-in-the-loop confirmations",
+            "Multi-channel alerts (SMS, Telegram) with rate limiting",
+            "Audit log & replay links for each incident"
+          ],
+          images: [
+            "../assets/images/anti-violence/alert-flow.png",
+            "../assets/images/anti-violence/telegram-bot.png",
+            "../assets/images/anti-violence/dashboard.png"
+          ]
+        },
+        "shyra": {
+          title: "Shyra – Automated News Web Scraper with YouTube SEO",
+          tech: "Python (Django) | Playwright, Bing API",
+          desc: "Aggregates news, extracts keywords/titles/tags optimized for YouTube SEO, outputs CMS-ready content.",
+          bullets: [
+            "Headless Playwright scraping with retries",
+            "Keyword extraction & SEO scoring",
+            "Queue-based pipeline (Celery/Redis)"
+          ],
+          images: [
+            "../assets/images/shyra1 (1).png",
+            "../assets/images/shyra2.png"
+          ]
+        },
+        "kaizerfit": {
+          title: "Kaizer Fit – AI-Powered Gym & Nutrition App",
+          tech: "FastAPI, Flutter, PostgreSQL | LLaVA/LLaMA3",
+          desc: "Meal image analysis, weekly nutrition reports, BMI & workout logging. Pending Play Store launch.",
+          bullets: [
+            "Image→macros inference with strict JSON",
+            "Weekly PDF reports stored on S3",
+            "Auth, hydration, steps, activities microservices"
+          ],
+          images: [
+            "../assets/images/kaizerfit/app-home.png",
+            "../assets/images/kaizerfit/nutrition-report.png",
+            "../assets/images/kaizerfit/bmi-trend.png"
+          ]
+        }
+      };
+
+      /* -------- Modal plumbing -------- */
+      const modal = document.getElementById('project-modal');
+      const titleEl = modal.querySelector('#modal-title');
+      const techEl  = modal.querySelector('.modal__tech');
+      const descEl  = modal.querySelector('.modal__desc');
+      const bulletsEl = modal.querySelector('.modal__bullets');
+      const galleryEl = modal.querySelector('.modal__gallery');
+
+      function fillModal(data){
+        titleEl.textContent = data.title;
+        techEl.textContent  = data.tech;
+        descEl.textContent  = data.desc;
+
+        bulletsEl.innerHTML = "";
+        (data.bullets || []).forEach(b => {
+          const li = document.createElement('li');
+          li.textContent = b;
+          bulletsEl.appendChild(li);
+        });
+
+        galleryEl.innerHTML = "";
+        (data.images || []).forEach(src => {
+          const img = document.createElement('img');
+          img.src = src; img.alt = data.title;
+          galleryEl.appendChild(img);
+        });
+      }
+
+      function openModal(id){
+        const data = PROJECTS[id];
+        if(!data) return;
+        fillModal(data);
+        modal.classList.add('is-open');
+        modal.setAttribute('aria-hidden', 'false');
+        modal.querySelector('.modal__close').focus();
+        document.body.style.overflow = 'hidden';
+      }
+
+      function closeModal(){
+        modal.classList.remove('is-open');
+        modal.setAttribute('aria-hidden', 'true');
+        document.body.style.overflow = '';
+      }
+
+      modal.addEventListener('click', e => {
+        if(e.target.matches('[data-close]')) closeModal();
+      });
+      window.addEventListener('keydown', e => { if(e.key === 'Escape') closeModal(); });
+
+      // wire up cards (click + optional hover for desktop)
+      const cards = document.querySelectorAll('.project-card');
+      cards.forEach(card => {
+        const id = card.getAttribute('data-id');
+
+        // click (works on mobile/desktop)
+        card.addEventListener('click', () => openModal(id));
+
+        // optional hover with small delay (desktop only)
+        let hoverTimer;
+        card.addEventListener('mouseenter', () => {
+          if (window.matchMedia('(hover: hover)').matches) {
+            hoverTimer = setTimeout(() => openModal(id), 250);
+          }
+        });
+        card.addEventListener('mouseleave', () => clearTimeout(hoverTimer));
+      });
+    </script>
+  </body>
+</html>
