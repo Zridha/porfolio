@@ -2,10 +2,10 @@
 :root{
   --bg: #0b0f13;
   --panel: #0f1419;
+  --text: #e7f0f2;
   --muted: #b7c2c6;
   --accent: #10b981;     /* emerald */
   --accent-2:#0ea471;
-   --text: #e7f0f2;
   --ring: rgba(16,185,129,0.35);
   --border: rgba(255,255,255,0.08);
   --shadow: rgba(0,0,0,0.45);
@@ -401,3 +401,141 @@ body{
 
 
 }
+
+@media (max-width: 600px) {
+  .hero {
+    flex-direction: column;
+    padding: 20px;
+  }
+  .hero-left {
+    max-width: 100%;
+    text-align: center;
+  }
+  .hero-right {
+    max-width: 100%;
+    text-align: center;
+    margin: 20px 0;
+  }
+  .portrait {
+    width: 200px;
+    height: 200px;
+  }
+  .skill-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  .contact-form {
+    padding: 16px;
+  }
+}
+
+.resume-grid {
+  display: grid;
+  gap: 18px;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+@media (max-width: 600px) {
+  .resume-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+}
+
+.logo-ring img {
+  width: 70%;
+  height: 70%;
+  object-fit: contain;
+}
+
+@media (max-width: 600px) {
+  .logo-ring {
+    width: 60px;
+    height: 60px;
+  }
+}
+
+.resume-card {
+  padding: 16px 20px;
+}
+
+@media (max-width: 600px) {
+  .resume-card {
+    padding: 12px 14px;
+  }
+}
+
+.resume-card p {
+  overflow-wrap: break-word;
+}
+
+@media (max-width: 600px) {
+  .resume-card h4 {
+    font-size: 1rem;
+  }
+  .resume-card p {
+    font-size: 0.85rem;
+  }
+  .resume-card .year {
+    font-size: 0.75rem;
+  }
+}
+@media (max-width: 600px) {
+  .resume-card h4 {
+    font-size: 1rem;
+  }
+  .resume-card p {
+    font-size: 0.85rem;
+  }
+  .resume-card .year {
+    font-size: 0.75rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .resume-block {
+    padding: 20px 12px;
+  }
+  .skills {
+    padding: 20px 12px;
+  }
+}
+
+@media (max-width: 600px) {
+  .resume-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+  .logo-ring {
+    width: 60px;
+    height: 60px;
+  }
+  .logo-ring img {
+    width: 60%;
+    height: 60%;
+  }
+  .resume-card {
+    padding: 12px 14px;
+  }
+  .resume-card h4 {
+    font-size: 1rem;
+  }
+  .resume-card p {
+    font-size: 0.85rem;
+    overflow-wrap: break-word;
+  }
+  .resume-card .year {
+    font-size: 0.75rem;
+  }
+  .resume-block {
+    padding: 20px 12px;
+  }
+  .skills {
+    padding: 20px 12px;
+  }
+}
+
